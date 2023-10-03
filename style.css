@@ -1,6 +1,13 @@
-/* comentário em css - margin-left: 10%;
-    margin-right: 10%; ou margin: 0 10% 0 */
-    /*  */
+/* 
+comentário em css - margin-left: 10%;
+margin-right: 10%; ou margin: 0 10% 0 
+*/
+
+/* 
+Botão direito do mouse + inspecionar + setinha e tela (ctrl + shift + C) 
+Usado para ver a estrutura 
+*/
+
 
 body {
     margin: 0;
@@ -8,24 +15,77 @@ body {
 
 .header {
     background-color: black;
+    /* Configurar o tamanho da borda, ocupando 100% da página e aumentando sua altura em px */
+    width: 100%;
+    height: 100px;
+    /* Borda somente em baixo do elemento, usar a solid (sem traço) */
+    border-bottom: 4px solid #32b9cd;
 }
 
-.container {
+.header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
-    border: 1px solid pink;
-    margin: 0 10% 0 10%
-    
+    margin: 0 10% 0 10%;
+    /* Colocar a altura 100% do pai */
+    height: 100%;
 }
 
-h1 {
+.header .container h1 {
     color: #32b9cd;
     margin: 0;
 }
 
-.navbar {
-    color: rgb(255, 255, 0);
+.header .container .navbar {
+    /* color: #ff7700 mover para .header .container .navbar li a */
+    list-style: none;
+    /* Tira a estilização de lista */
+}
+
+.header .container .navbar li {
+    display: inline;
+    /* 
+    Colocar uma separação entre os itens da lista / 0 em cima e em baixo (ou seja, não mexa) / 15px laterais, no caso 30px, 15 de um item da lista e 15 do outro. 
+    */
+
+    /* 
+    Pode se usar padding-right: 15px, padding-left: 15px.
+    */
+    padding: 0 15px;
+}
+
+.header .container .navbar li a {
+    color: #ff7700;
+    text-decoration: none;
+}
+
+
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background-image: url(./imagens/bg-jelly-fish-para_outras_pags.png);
+    /* Fica um espaço devido ao paragrafo */
+}
+
+.banner .container {
+    width: 80%;
+    height: 100%;
+    /* Dois valores / 0 cima e baixo / 10% direita e esquerda */
+    margin: 0 10%;
+    /* Disposição flexivel e sem ser em bloco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container p {
+    margin: 0;
+    color: white;
+    font-size: 32px;
+    /* Reduzimos a largura para limitar o seu espaço */
+    width: 10%;
 }
 
 
